@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as v;
+
+@mixin grid-8-col {
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+//        @include m.grid-8-col;
+
+
+
+@mixin full {
+  grid-column: full-start / full-end;
+}
+
+@mixin central {
+  grid-column: center-start / center-end;
+}
+
+@mixin imgShadow {
+  box-shadow: 0 0.5rem 1rem rgba(v.$color-primary-3,.5);
+}

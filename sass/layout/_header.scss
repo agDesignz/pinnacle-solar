@@ -1,0 +1,60 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.header {
+  &__top {
+    width: 100%;
+    padding: 1.5rem 3.5rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: min-content 1fr;
+    position: fixed;
+    top: 0;
+  }
+    &__branding {
+      height: 7rem;
+    }
+
+    &__home-link {
+      height: 100%;
+    }
+
+    &__logo {
+      height: 100%;
+    }
+
+    &__nav {
+      justify-self: end;
+      display: grid;
+      grid-template-columns: repeat(4, max-content);
+      column-gap: 4rem;
+    }
+
+
+
+  &__hero {
+    height: 100vh;
+    // grid-column: center-start / center-end;
+    padding: 20rem 0;
+    display: grid;
+    grid-template-rows: 1fr min-content 1fr;
+    @include m.grid-8-col;
+    row-gap: 2rem;
+
+    &__title {
+      align-self: end;
+      text-shadow: 0 0.5rem 1rem rgba(v.$color-grey-medium,.5);
+      grid-column: center-start / center-end;
+    }
+
+    &__tagline {
+      text-shadow: 0 0.5rem 1rem rgba(v.$color-grey-medium,.5);
+      grid-column: center-start / center-end;
+    }
+
+    &__btn {
+      margin-top: 5rem;
+      grid-column: center-start / center-end;
+    }
+  }
+}

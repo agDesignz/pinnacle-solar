@@ -1,0 +1,37 @@
+@use "../abstracts/variables" as v;
+
+.header-menu {
+  &__item {
+    list-style: none;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: v.$color-secondary-2;
+      transform: scaleX(0);
+      transition: transform 0.2s, width 0.4s cubic-bezier(1,0,0,1) 0.2s, background-color 0.1s;
+    }
+
+    &:hover::after,
+    &--active::after {
+      transform: scaleX(1)
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 2rem;
+      color: v.$color-secondary-2;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 0.5rem 0;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.home-container {
+  display: grid;
+  @include m.grid-8-col;
+  grid-template-rows: minmax(max-content, 35vw) repeat(4, min-content);
+  background-color: v.$color-grey-lighter;
+}

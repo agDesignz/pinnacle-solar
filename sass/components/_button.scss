@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as v;
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    justify-self: start;
+    align-self: start;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    font-size: 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(v.$color-black-1,.2);
+    opacity: .8;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(v.$color-black-1,.2);
+    opacity: 1;
+  }
+
+  &:active,
+  &:focus {
+    transform: translateY(-1px);
+    // box-shadow: 0 0.5rem 1rem rgba(v.$color-black-light,.2);
+  }
+
+  &--gold {
+    background-image: linear-gradient(to top right, v.$color-secondary-2, v.$color-secondary-1);
+    color: v.$color-primary-2;
+  }
+}

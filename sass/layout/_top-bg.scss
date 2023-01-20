@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as v;
+
+.top-background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -5;
+  background-size: cover;
+  background-position: center center;
+
+  &--home {
+    background-image: linear-gradient(to left top, rgba(v.$color-blue-2,0.8), rgba(v.$color-grey-light,0.7)),url(../img/hero-1.jpg);
+
+  }
+}
