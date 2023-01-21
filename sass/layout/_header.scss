@@ -38,17 +38,17 @@
     padding: 20rem 0;
     display: grid;
     grid-template-rows: 1fr min-content 1fr;
-    @include m.grid-8-col;
+    grid-template-columns: v.$grid-8-col;
     row-gap: 2rem;
 
     &__title {
       align-self: end;
-      text-shadow: 0 0.5rem 1rem rgba(v.$color-grey-medium,.5);
+      text-shadow: 0 0.5rem 1rem rgba(v.$color-secondary-light,.3);
       grid-column: center-start / center-end;
     }
 
     &__tagline {
-      text-shadow: 0 0.5rem 1rem rgba(v.$color-grey-medium,.5);
+      text-shadow: 0 0.5rem 1rem rgba(v.$color-secondary-light,.3);
       grid-column: center-start / center-end;
     }
 

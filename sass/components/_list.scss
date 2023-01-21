@@ -1,0 +1,18 @@
+@use "../abstracts/variables" as v;
+
+.list {
+
+
+  &__heading {
+
+  }
+
+  &__item {
+
+  }
+
+
+  &--why {
+    background-image: v.$gradient-green;
+  }
+}

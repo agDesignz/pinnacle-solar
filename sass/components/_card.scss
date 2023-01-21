@@ -1,0 +1,11 @@
+@use "../abstracts/variables" as v;
+
+.card {
+  border-radius: .5rem;
+  box-shadow: 0 0.5rem 1rem rgba(v.$color-grey-medium, .5);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  &--lg {
+    padding: 4rem;
+  }
+}
