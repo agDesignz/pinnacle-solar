@@ -51,6 +51,12 @@
       box-shadow: 0 1rem 2rem rgba(v.$color-grey-medium,.2);
     }
   }
+
+  &--sm {
+    &:hover {
+      transform: translateY(-3px) scale(1.04)
+    }
+  }
 }
 
 .text-btn {

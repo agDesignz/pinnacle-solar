@@ -9,10 +9,10 @@ $color-secondary-dark: #F7961E;
 // $color-secondary-3: #A15700;
 // $color-secondary-4: #FFDB6E;
 
-// $color-blue-1: #215387;
-// $color-blue-2: #001E6C;
-// $color-blue-3: #474FB4;
-// $color-blue-lighter: #a7bfff;
+$color-blue-1: #215387;
+$color-blue-2: #001E6C;
+$color-blue-3: #474FB4;
+$color-blue-lighter: #a7bfff;
 
 $color-black: #000;
 $color-black-light: #181818;
@@ -50,7 +50,7 @@ $row-gap-sm: 2vw;
 $fullGrid: full-start / full-end;
 $centralGrid: center-start / center-end;
 
-$grid-8-col: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+$grid-8-col: [full-start] minmax(6rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
 // STYLE
 $imgShadow: 0 0.5rem 1rem rgba($color-grey-dark,.5);

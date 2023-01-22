@@ -1,0 +1,48 @@
+@use "../abstracts/variables" as v;
+
+.contact-form {
+  &__group {
+    margin-bottom: 1.5rem;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 1rem 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(v.$color-grey-light, 0);
+    border-radius: 4px;
+    color: v.$color-white;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color 0.2s;
+
+    // &--message {
+      box-shadow: rgba(v.$color-grey-medium, 0.6) 0px 4px 24px;
+      padding-left: 3px;
+    // }
+
+    &::placeholder {
+      color: v.$color-grey-light;
+    }
+
+    &:focus {
+      border-bottom-color: v.$color-grey-light;
+      background-color: rgba(v.$color-grey-dark, .5);
+    }
+  }
+
+  &__buttons {
+    // text-align: right;
+  }
+
+  &__button {
+    background: none;
+    border: 1px solid v.$color-white;
+    color: v.$color-white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    outline: none;
+  }
+}
