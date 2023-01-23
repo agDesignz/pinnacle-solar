@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.footer {
+  background-color: v.$color-grey-dark;
+  display: grid;
+  grid-template-columns: v.$grid-8-col;
+  @include m.sectionPadVertical;
+
+  &__container {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    align-items: flex-start;
+    column-gap: v.$col-gap-md;
+    row-gap: v.$row-gap-md;
+  }
+
+  &__box {
+
+    &--btn {
+      justify-self: end;
+    }
+  }
+
+  &__logo {
+    max-width: 100%;
+  }
+
+  &__email {
+    &,
+    &:link,
+    &:visited {
+      // text-decoration: none;
+      color: v.$color-white;
+      font-size: 2rem;
+      transition: all .2s;
+      display: inline-block;
+    }
+
+    &:hover {
+      color: v.$color-grey-light;
+      transform: translateY(-2px);
+    }
+  }
+
+  &__address {
+    color: v.$color-white;
+  }
+}

@@ -64,7 +64,7 @@
   grid-column: v.$fullGrid;
   padding: 3.5rem;
   @include m.sectionPadVertical;
-  background-image: linear-gradient(rgba(v.$color-grey-light, .8), rgba(v.$color-grey-light, .8)), url("../img/info-bg.jpg");
+  background-image: linear-gradient(to top right, rgba(v.$color-grey-dark, .8), rgba(v.$color-grey-medium, .8)), url("../img/hero-3.jpg");
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: v.$col-gap-md;

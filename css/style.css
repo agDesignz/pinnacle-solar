@@ -34,6 +34,7 @@ body {
   font-size: 5rem;
   font-weight: 600;
   line-height: 1.2;
+  color: #F7961E;
 }
 
 .heading-3 {
@@ -41,6 +42,7 @@ body {
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: 1px;
+  color: #006D6D;
 }
 
 .hero-subheading {
@@ -53,14 +55,9 @@ body {
   color: #fff;
 }
 
-.text-green {
-  color: #303030;
-}
-
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  color: #005151;
   padding: 1.5rem 4rem;
   display: inline-block;
   justify-self: start;
@@ -79,9 +76,16 @@ body {
 }
 .btn--gold {
   background-image: linear-gradient(to top right, #F7961E, #FCC315);
+  color: #005151;
 }
-.btn--white, .btn--white:link, .btn--white:visited {
+.btn--gold-border, .btn--gold-border:link, .btn--gold-border:visited {
   border: 2px solid #F7961E;
+  color: #005151;
+}
+.btn--white-border {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
 }
 .btn--dark-bg, .btn--dark-bg:link, .btn--dark-bg:visited {
   box-shadow: 0 0.5rem 1rem rgba(96, 96, 96, 0.2);
@@ -147,9 +151,6 @@ body {
   background-color: rgba(48, 48, 48, 0.5);
 }
 .contact-form__button {
-  background: none;
-  border: 1px solid #fff;
-  color: #fff;
   font-size: 1.4rem;
   cursor: pointer;
   outline: none;
@@ -180,6 +181,41 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   padding: 0.5rem 0;
+}
+
+.footer {
+  background-color: #303030;
+  display: grid;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+.footer__container {
+  grid-column: center-start/center-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  align-items: flex-start;
+  column-gap: 4vw;
+  row-gap: 4vw;
+}
+.footer__box--btn {
+  justify-self: end;
+}
+.footer__logo {
+  max-width: 100%;
+}
+.footer__email, .footer__email:link, .footer__email:visited {
+  color: #fff;
+  font-size: 2rem;
+  transition: all 0.2s;
+  display: inline-block;
+}
+.footer__email:hover {
+  color: #bebebe;
+  transform: translateY(-2px);
+}
+.footer__address {
+  color: #fff;
 }
 
 .header__top {
@@ -326,7 +362,7 @@ body {
   padding: 3.5rem;
   padding-top: 10rem;
   padding-bottom: 10rem;
-  background-image: linear-gradient(rgba(190, 190, 190, 0.8), rgba(190, 190, 190, 0.8)), url("../img/info-bg.jpg");
+  background-image: linear-gradient(to top right, rgba(48, 48, 48, 0.8), rgba(96, 96, 96, 0.8)), url("../img/hero-3.jpg");
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 4vw;

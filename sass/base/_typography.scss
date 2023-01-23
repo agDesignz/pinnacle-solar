@@ -20,6 +20,7 @@ body {
   font-size: 5rem;
   font-weight: 600;
   line-height: 1.2;
+  color: v.$color-secondary-dark;
 }
 
 .heading-3 {
@@ -27,6 +28,7 @@ body {
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: 1px;
+  color: v.$color-primary-light;
 }
 
 .hero-subheading {
@@ -37,8 +39,4 @@ body {
 
 .text-light {
   color: v.$font-light;
-}
-
-.text-green {
-  color: v.$font-dark;
 }
