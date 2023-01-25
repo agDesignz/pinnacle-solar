@@ -1,42 +1,40 @@
 
-$color-primary-light: #006D6D;
-$color-primary-dark: #005151;
-// $color-primary-3: #002222;
-// $color-primary-4: #269090;
+$color-primary: #277BC0;
+$color-primary-2: #1a5280;
+$color-primary-3: #091d2d;
+$color-primary-4: #06131d;
+$color-primary-5: #4194d9;
+$color-primary-6: #bad8f1;
 
-$color-secondary-light: #FCC315;
-$color-secondary-dark: #F7961E;
-// $color-secondary-3: #A15700;
-// $color-secondary-4: #FFDB6E;
+$color-secondary: #FFCB42;
+$color-secondary-1: #FFB200;
+$color-secondary-2: #ff9d00;
 
-$color-blue-1: #215387;
-$color-blue-2: #001E6C;
-$color-blue-3: #474FB4;
-$color-blue-lighter: #a7bfff;
+$color-black: #040403;
+$color-black-light: #191815;
 
-$color-black: #000;
-$color-black-light: #181818;
-
-$color-grey-dark: #303030;
-$color-grey-medium: #606060;
-$color-grey-light: #bebebe;
-$color-grey-lighter: #f3f4f5;
+$color-grey-dark: #2e2c27;
+$color-grey-medium: #59554c;
+$color-grey-light: #969ba0;
+$color-grey-light: #b1ada4;
+$color-grey-lighter: #e7e6e3;
 
 $color-white: #fff;
 
-// RESPONSIVE BREAKPOINTS
-$bp-largest: 75em;      // 1200px
-$bp-large: 62.5em;      // 1000px
-$bp-medium: 50em;       // 800px
-$bp-small: 37.5em;      // 600
-$bp-xs: 31.25em;        // 500px
+
+$color-primary-light: $color-primary;
+$color-primary-dark: $color-primary-2;
+$color-secondary-light: $color-secondary;
+$color-secondary-dark: $color-secondary-1;
 
 // FONTS
 $font-primary: sans-serif;
 $font-display: serif;
 $default-font-size: 1.8rem;
-$font-dark: $color-grey-dark;
+
+$font-dark: $color-grey-medium;
 $font-light: $color-white;
+
 
 // LAYOUT
 $col-gap-lg: 6vw;
@@ -50,10 +48,19 @@ $row-gap-sm: 2vw;
 $fullGrid: full-start / full-end;
 $centralGrid: center-start / center-end;
 
-$grid-8-col: [full-start] minmax(6rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+$grid-12-col: [full-start] minmax(6rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
 // STYLE
 $imgShadow: 0 0.5rem 1rem rgba($color-grey-dark,.5);
 $gradient-green: linear-gradient(to top right, $color-primary-dark, $color-primary-light);
 $gradient-gold: linear-gradient(to top right, $color-secondary-dark, $color-secondary-light);
 // $gradient-green: linear-gradient(to top right, $color-primary-dark, $color-primary-light);
+
+$shadow-light-w: rgba($color-grey-medium, 0.5) 0px .8rem 2.4rem;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;      // 1200px
+$bp-large: 62.5em;      // 1000px
+$bp-medium: 50em;       // 800px
+$bp-small: 37.5em;      // 600
+$bp-xs: 31.25em;        // 500px

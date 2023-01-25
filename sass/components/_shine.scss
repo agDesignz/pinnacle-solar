@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as v;
+
+.shine {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 100px;
+    height: 100%;
+    background-color: rgba(v.$color-primary-6, .3);
+    transform: skewX(-30deg);
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to top right, rgba(v.$color-grey-medium, .2), rgba(v.$color-grey-medium, .6),);
+    box-shadow: 0 1rem 2rem rgba(v.$color-grey-medium,.2);
+
+    &::before {
+      left: 160%;
+    }
+  }
+}

@@ -3,7 +3,7 @@
 
 .home-container {
   display: grid;
-  grid-template-columns: v.$grid-8-col;
+  grid-template-columns: v.$grid-12-col;
   grid-template-rows: minmax(max-content, 35vw) repeat(4, min-content);
   background-color: v.$color-white;
 }
@@ -11,7 +11,7 @@
 .home-why {
   grid-column: v.$fullGrid;
   display: grid;
-  grid-template-columns: v.$grid-8-col;
+  grid-template-columns: v.$grid-12-col;
   @include m.sectionPadVertical;
   background-color: v.$color-grey-lighter;
 
@@ -21,4 +21,11 @@
     grid-template-columns: 1fr 1fr;
     column-gap: v.$col-gap-md;
   }
+}
+
+.home-options {
+  grid-column: v.$fullGrid;
+  display: grid;
+  grid-template-columns: v.$grid-12-col;
+  background-color: v.$color-grey-dark;
 }
