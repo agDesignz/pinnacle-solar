@@ -18,7 +18,7 @@
   }
 
   &:hover {
-    background-image: linear-gradient(to top right, rgba(v.$color-grey-medium, .2), rgba(v.$color-grey-medium, .6),);
+    background-image: linear-gradient(to top right, rgba(v.$color-secondary-light, .2), rgba(v.$color-white, .2),);
     box-shadow: 0 1rem 2rem rgba(v.$color-grey-medium,.2);
 
     &::before {

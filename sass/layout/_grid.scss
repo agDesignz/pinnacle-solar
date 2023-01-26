@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.container {
+  &__home {
+    display: grid;
+    grid-template-columns: v.$grid-12-col;
+    grid-template-rows: minmax(max-content, 35vw) repeat(4, min-content);
+    background-color: v.$color-white;
+  }
+
+  &__full {
+    grid-column: v.$fullGrid;
+  }
+
+  &__central {
+    grid-column: v.$centralGrid;
+  }
+}

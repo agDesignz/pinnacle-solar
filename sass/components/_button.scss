@@ -60,7 +60,7 @@
 
   &--sm {
     &:hover {
-      transform: translateY(-3px) scale(1.04)
+      transform: translateY(-3px) scale(1.04);
     }
   }
 }
@@ -74,13 +74,29 @@
     color: v.$color-primary-light;
     border-bottom: 1px solid v.$color-primary-light;
     padding: 3px;
-    transition: all .2s;
+    transition: all 0.2s;
   }
 
   &:hover {
     background-color: v.$color-primary-light;
     color: v.$color-white;
     box-shadow: 0 1rem 2rem rgba(v.$color-grey-medium, .15);
-        transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  &--light {
+    &,
+    &:link,
+    &:visited {
+      color: v.$color-secondary;
+      border-bottom: 1px solid v.$color-secondary;
+    }
+
+    &:hover {
+      background-color: v.$color-secondary-1;
+      color: v.$color-primary-dark;
+      // box-shadow: 0 1rem 2rem rgba(v.$color-grey-medium, .15);
+      // transform: translateY(-2px);
+    }
   }
 }

@@ -2,7 +2,7 @@
 @use "../abstracts/mixins" as m;
 
 .icon-list {
-  background-color: v.$color-white;
+  // background-color: v.$color-white;
   width: 100%;
   display: grid;
   grid-template-columns: min-content 1fr;

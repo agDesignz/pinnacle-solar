@@ -2,6 +2,7 @@
 @use "../abstracts/mixins" as m;
 
 .footer {
+  font-size: 1.4rem;
   background-color: v.$color-grey-dark;
   display: grid;
   grid-template-columns: v.$grid-12-col;

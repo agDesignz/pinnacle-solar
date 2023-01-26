@@ -2,7 +2,6 @@
 @use "../abstracts/mixins" as m;
 
 .home-intro {
-  grid-column: v.$centralGrid;
   display: grid;
   grid-template-columns: 3fr 2fr;
   row-gap: v.$row-gap-md;
@@ -60,10 +59,12 @@
   }
 }
 
-.options {
+.home-options {
+  display: grid;
+  grid-template-columns: v.$grid-12-col;
+  background-color: v.$color-primary-dark;
 
   &__container {
-    grid-column: v.$centralGrid;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: v.$col-gap-sm;
@@ -80,9 +81,6 @@
     grid-column: 1 / -1;
     padding: 2rem;
 
-    // &--bottom {
-      // font-size: 2.8rem;
-    // }
   }
 
   &__btn {
@@ -92,11 +90,50 @@
   }
 }
 
+.features {
+  &__list {
+    display: grid;
+    row-gap: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    line-height: 1;
+  }
+
+  &__item {
+    padding: 1rem 0;
+
+    &--accent {
+      padding: 0;
+      font-size: 2.5rem;
+      color: v.$color-secondary-dark;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 2px solid v.$color-secondary-light;
+    }
+  }
+}
+
+.home-why {
+  display: grid;
+  grid-template-columns: v.$grid-12-col;
+  @include m.sectionPadVertical;
+  background-color: v.$color-primary-dark;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: v.$col-gap-md;
+  }
+}
+
 .home-info {
-  grid-column: v.$fullGrid;
   padding: 3.5rem;
   @include m.sectionPadVertical;
-  // background-image: linear-gradient(to top right, rgba(v.$color-grey-dark, .8), rgba(v.$color-grey-medium, .8)), url("../img/hero-3.jpg");
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: v.$col-gap-md;
@@ -110,7 +147,6 @@
 
   &__card {
     padding: 3rem;
-    // height: 30vh;
     display: grid;
     grid-template-rows: min-content min-content;
     row-gap: v.$row-gap-sm;
@@ -145,7 +181,6 @@
 }
 
 .home-cta {
-  grid-column: v.$fullGrid;
   @include m.sectionPadVertical;
   background-image: linear-gradient(to top right, rgba(v.$color-grey-dark, .85), rgba(v.$color-black-light, .8)), url(../img/hero-2.jpg);
   background-size: cover;
@@ -154,7 +189,6 @@
   grid-template-columns: v.$grid-12-col;
 
   &__container {
-    grid-column: center-start / center-end;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: v.$col-gap-md;

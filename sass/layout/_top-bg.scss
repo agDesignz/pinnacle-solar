@@ -9,7 +9,8 @@
   background-position: center center;
 
   &--home {
-    background-image: linear-gradient(to left top, rgba(v.$color-black-light,0.8), rgba(v.$color-grey-dark,0.8)),url(../img/hero-1.jpg);
+    background-image: linear-gradient(to left top, rgba(v.$color-black-light,0.8), rgba(v.$color-grey-dark,0.8)),url(../img/hero-4.jpg);
+    background-image: linear-gradient(to left top, rgba(v.$color-black-light,0.5), rgba(v.$color-grey-dark,0.5)),url(../img/hero-4.jpg);
 
   }
 }
