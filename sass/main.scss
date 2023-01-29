@@ -8,16 +8,14 @@
 @use "base/utilities";
 
 @use "components/button";
-@use "components/card";
 @use "components/contact";
-@use "components/features";
 @use "components/header-menu";
 @use "components/icon-list";
 @use "components/image-card";
 @use "components/shine";
 
+@use "layout/containers";
 @use "layout/footer";
-@use "layout/grid";
 @use "layout/header";
 @use "layout/images";
 @use "layout/top-bg";

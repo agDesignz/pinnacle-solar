@@ -1,0 +1,39 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+
+.container {
+  &__home {
+    display: grid;
+    // grid-template-columns: v.$grid-12-col;
+    grid-template-rows: minmax(max-content, 35vw) repeat(4, min-content);
+    background-color: v.$color-white;
+  }
+
+  &__full {
+    grid-column: v.$fullGrid;
+  }
+
+  &__central {
+    grid-column: v.$centralGrid;
+  }
+
+  &--12-col {
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+    @include m.respond(bp-md) {
+      grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+    }
+  }
+}
+
+.stacker {
+
+  @include m.respond(bp-md) {
+    @include m.center70;
+  }
+
+  @include m.respond(bp-sm) {
+    width: 100%;
+  }
+}

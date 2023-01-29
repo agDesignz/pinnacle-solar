@@ -5,7 +5,11 @@
   display: grid;
   grid-template-columns: 3fr 2fr;
   row-gap: v.$row-gap-md;
-  @include m.sectionPadVertical;
+  @include m.padVertLg;
+
+  @include m.respond(bp-md) {
+    @include m.stackEm;
+  }
 
   &__heading {
     grid-column: 1 / -1;
@@ -16,7 +20,7 @@
     padding-right: 4vw;
     display: grid;
     grid-template-rows: repeat(3, min-content);
-    row-gap: v.$row-gap-sm;
+    row-gap: v.$row-gap-md;
   }
 
   &__block {
@@ -34,12 +38,22 @@
     justify-self: start;
   }
 
-  &__text {}
+  &__btn {
+    justify-self: start;
+
+    @include m.respond(bp-md) {
+      justify-self: center;
+    }
+  }
 
   &__gal {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(4, 10rem);
+
+    @include m.respond(bp-md) {
+      grid-template-rows: repeat(4, 15vw);
+    }
   }
 
   &__fig {
@@ -61,15 +75,26 @@
 
 .home-options {
   display: grid;
-  grid-template-columns: v.$grid-12-col;
   background-color: v.$color-primary-dark;
+  grid-column: v.$fullGrid;
 
   &__container {
+    grid-column: v.$centralGrid;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: v.$col-gap-sm;
-    row-gap: v.$row-gap-sm;
-    @include m.sectionPadVertical;
+    row-gap: v.$row-gap-md;
+    @include m.padVertMd;
+
+    @include m.respond(bp-lg) {
+      grid-column: v.$fullGrid;
+    }
+
+    @include m.respond(bp-md) {
+      grid-column: v.$centralGrid;
+      @include m.stackEm;
+    }
+
   }
 
   &__heading {
@@ -77,17 +102,21 @@
     padding: 2rem;
   }
 
-  &__subheading {
-    grid-column: 1 / -1;
-    padding: 2rem;
+    &__subheading {
+      grid-column: 1 / -1;
+      padding: 0 2rem;
 
-  }
+      &--bottom {
+        align-self: end;
+      }
+    }
 
   &__btn {
     grid-column: 1 / -1;
-    padding: 2rem;
-
+    justify-self: center;
+    padding: 0 2rem;
   }
+
 }
 
 .features {
@@ -96,15 +125,17 @@
     row-gap: 2rem;
     padding: 2rem;
     border-radius: 1rem;
+    margin-bottom: 2.4vw 0;
   }
 
   &__title {
-    font-size: 2.8rem;
+    font-size: 4rem;
     line-height: 1;
   }
 
   &__item {
-    padding: 1rem 0;
+    padding: 1.6rem 0;
+    font-size: 2rem;
 
     &--accent {
       padding: 0;
@@ -118,81 +149,82 @@
   }
 }
 
-.home-why {
-  display: grid;
-  grid-template-columns: v.$grid-12-col;
-  @include m.sectionPadVertical;
-  background-color: v.$color-primary-dark;
-
-  &__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: v.$col-gap-md;
-  }
-}
-
 .home-info {
+  grid-column: v.$fullGrid;
   padding: 3.5rem;
-  @include m.sectionPadVertical;
+  @include m.padVertLg;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: v.$col-gap-md;
   grid-template-rows: min-content min-content;
   row-gap: v.$row-gap-md;
 
+  @include m.respond(bp-lg) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: v.$centralGrid;
+  }
+
+  @include m.respond(bp-md) {
+    padding: 0;
+    @include m.padVertLg;
+  }
+
+  @include m.respond(bp-sm) {
+    @include m.stackEm;
+  }
+
   &__heading {
     grid-column: 1 / -1;
     text-align: center;
   }
 
-  &__card {
-    padding: 3rem;
+  &__content {
+    grid-column: 2 / -2;
+    margin-top: 4vw;
     display: grid;
-    grid-template-rows: min-content min-content;
     row-gap: v.$row-gap-sm;
-    justify-content: center;
-    border-radius: 4px;
-    overflow: hidden;
-    background-position: center;
-    background-size: cover;
 
-    &--1 {
-      background-image: linear-gradient(rgba(v.$color-black-light, .8), rgba(v.$color-black-light, .8)), url("../img/card-1.jpg");
+    @include m.respond(bp-lg) {
+      grid-column: 1 / -1;
+      margin-top: 2vw;
     }
   }
+}
 
-  &__img {
-    position: relative;
-    height: 100%;
-  }
+.home-why {
+  display: grid;
+  @include m.padVertMd;
+  background-color: v.$color-primary-dark;
 
-  &__subheading {
-    font-size: 2.5rem;
-    font-weight: 500;
-    text-align: center;
-    z-index: 10;
-  }
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: v.$col-gap-lg;
 
-  &__text {
-    font-wieght: 500;
-    letter-spacing: 1px;
-    z-index: 10;
+    @include m.respond(bp-lg) {
+      @include m.stackEm;
+    }
   }
 }
 
 .home-cta {
-  @include m.sectionPadVertical;
+  @include m.padVertMd;
   background-image: linear-gradient(to top right, rgba(v.$color-grey-dark, .85), rgba(v.$color-black-light, .8)), url(../img/hero-2.jpg);
   background-size: cover;
   background-position: center;
   display: grid;
-  grid-template-columns: v.$grid-12-col;
+  // grid-template-columns: v.$grid-12-col;
 
   &__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: v.$col-gap-md;
     row-gap: v.$col-gap-md;
+
+    @include m.respond(bp-md) {
+      grid-template-columns: 1fr;
+      padding: 4vw;
+    }
   }
 
   &__content {

@@ -1,7 +1,50 @@
 @use "../abstracts/variables" as v;
 
 
-@mixin sectionPadVertical {
+@mixin respond($breakpoint) {
+    @if $breakpoint == bp-sm{
+        @media only screen and (max-width: 37.5em) { @content };    //600px
+    }
+    @if $breakpoint == bp-md {
+        @media only screen and (max-width: 56.25em) { @content };     //900px
+    }
+    @if $breakpoint == bp-lg {
+        @media only screen and (max-width: 62.5em) { @content };    //1000px
+    }
+    @if $breakpoint == bp-xl {
+        @media only screen and (max-width: 75em) { @content };    //1200px
+    }
+    @if $breakpoint == bp-xxl{
+        @media only screen and (min-width: 112.5em) { @content };    //1800
+    }
+}
+
+@mixin padVertMd {
   padding-top: 10rem;
   padding-bottom: 10rem;
+
+  @include respond(bp-md) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+@mixin padVertLg {
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+
+  @include respond(bp-md) {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+}
+
+@mixin center70 {
+  width: 70%;
+  margin: auto;
+}
+
+@mixin stackEm {
+  grid-template-columns: 1fr;
+  row-gap: v.$row-gap-xl;
 }

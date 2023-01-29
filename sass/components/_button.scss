@@ -8,7 +8,7 @@
     text-decoration: none;
     padding: 1.2rem 3rem;
     display: inline-block;
-    justify-self: start;
+    // justify-self: start;
     align-self: start;
     border-radius: 10rem;
     transition: all 0.2s;
@@ -71,10 +71,11 @@
   &:visited {
     display: block;
     text-decoration: none;
-    color: v.$color-primary-light;
-    border-bottom: 1px solid v.$color-primary-light;
+    color: v.$color-primary-dark;
+    border-bottom: 1px solid v.$color-primary-dark;
     padding: 3px;
     transition: all 0.2s;
+    justify-self: start;
   }
 
   &:hover {
@@ -95,8 +96,6 @@
     &:hover {
       background-color: v.$color-secondary-1;
       color: v.$color-primary-dark;
-      // box-shadow: 0 1rem 2rem rgba(v.$color-grey-medium, .15);
-      // transform: translateY(-2px);
     }
   }
 }

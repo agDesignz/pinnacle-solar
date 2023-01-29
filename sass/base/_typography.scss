@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
 
 html,
 body,
@@ -25,6 +26,16 @@ body {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 2px;
+
+  @include m.respond(bp-lg) {
+    font-size: 5rem;
+    letter-spacing: 1.5px;
+  }
+
+  @include m.respond(bp-sm) {
+    font-size: 3.5rem;
+    letter-spacing: 1.2px;
+  }
 }
 
 .heading-2 {
@@ -32,6 +43,14 @@ body {
   font-weight: 500;
   line-height: 1.2;
   color: v.$color-primary-dark;
+
+  @include m.respond(bp-lg) {
+    font-size: 4.2rem;
+  }
+
+  @include m.respond(bp-sm) {
+    font-size: 3.2rem;
+  }
 }
 
 .heading-3 {
@@ -40,10 +59,15 @@ body {
   line-height: 1.2;
   letter-spacing: 1px;
   color: v.$color-primary-light;
+
+  @include m.respond(bp-lg) {
+    font-size: 2.5rem;
+    line-height: 1.5;
+  }
 }
 
 .hero-subheading {
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   line-height: 1;
   letter-spacing: 1px;
 }
