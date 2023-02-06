@@ -9,15 +9,16 @@
 
 @use "components/button";
 @use "components/contact";
-@use "components/header-menu";
+@use "components/hamburger";
 @use "components/icon-list";
 @use "components/image-card";
+@use "components/navigation";
 @use "components/shine";
 
 @use "layout/containers";
 @use "layout/footer";
 @use "layout/header";
-@use "layout/images";
 @use "layout/top-bg";
 
+@use "pages/about";
 @use "pages/home";

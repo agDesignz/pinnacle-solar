@@ -1,0 +1,84 @@
+@use "../abstracts/variables"as v;
+@use "../abstracts/mixins"as m;
+
+.hamburger {
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    z-index: 50;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    @include m.respond(bp-md) {
+      display: flex;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+
+    &,
+    &::after,
+    &::before {
+      width: 2.5rem;
+      height: 2px;
+      background-color: v.$color-white;
+      transition: transform 0.2s;
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -1rem;
+    }
+
+    &::after {
+      top: 1rem;
+    }
+  }
+
+  /// 
+  &__button:hover &__icon,
+  &__button:hover &__icon::after,
+  &__button:hover &__icon::before {
+    background-color: v.$color-grey-light;
+  }
+
+  &__button:hover &__icon::before {
+    top: -1.1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1.1rem;
+  }
+
+  &__checkbox:checked+&__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked+&__button &__icon::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  &__checkbox:checked+&__button &__icon::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}

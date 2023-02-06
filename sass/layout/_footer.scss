@@ -70,6 +70,11 @@
     }
   }
 
+  &__btn {
+    justify-self: end;
+    align-self: start;
+  }
+
   &__bottom {
     grid-column: v.$fullGrid;
     margin-top: 5rem;

@@ -34,7 +34,7 @@ $color-secondary-dark: $color-secondary-1;
 // FONTS
 $font-primary: 'Gotham', sans-serif;
 $font-secondary: 'Roboto', sans-serif;
-$default-font-size: 1.8rem;
+$default-font-size: 2rem;
 
 $font-dark: $color-grey-medium;
 $font-light: $color-white;
@@ -53,9 +53,6 @@ $row-gap-sm: 2vw;
 
 $fullGrid: full-start / full-end;
 $centralGrid: center-start / center-end;
-
-// $grid-12-col: [full-start] minmax(6rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-
 
 // STYLE
 $imgShadow: 0 0.5rem 1rem rgba($color-grey-dark,.5);

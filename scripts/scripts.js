@@ -1,26 +1,62 @@
-(function() {
+(function () {
   'use strict';
 
-const headerTop = document.querySelector('.header__top');
-const header = document.querySelector('.header');
-const headerTopHeight = headerTop.getBoundingClientRect().height;
-const headerHeight = header.getBoundingClientRect().height;
-console.log(headerHeight);
+  const headerTop = document.querySelector('.header__top');
+  const header = document.querySelector('.header');
 
-console.log(`-${headerHeight - headerTopHeight}px`);
+  const stickyNav = function (entries) {
+    const [entry] = entries;
+    headerTop.classList.toggle('sticky', !entry.isIntersecting);
+  }
 
-const stickyNav = function(entries) {
-  const [entry] = entries;
-  console.log(entry)
-  headerTop.classList.toggle('sticky', !entry.isIntersecting);
-}
+  const headerObserver = new IntersectionObserver(stickyNav, {
+    root: null,
+    threshold: 0
+  });
+  headerObserver.observe(header);
 
-const headerObserver = new IntersectionObserver(stickyNav, {
-  root: null,
-  threshold: 0,
-  rootMargin: `-${headerHeight - (headerTopHeight * 2)}px 0px 0px 0px`
+}());
+
+
+(function () {
+  'use strict';
+
+  ///////////////////// DROPDOWN MENU & NO SCROLLING
+
+  const body = document.querySelector("body");
+  const navBox = document.querySelector('#nav-toggle')
+  const nav = document.querySelector('.nav');
+
+  const dropMenu = function() {
+    if (this.checked) {
+      nav.classList.add("reveal");
+      body.classList.add('u-overflow-hidden');
+    } else {
+      nav.classList.remove("reveal");
+      body.classList.remove('u-overflow-hidden');
+    }
+  }
+
+  navBox.addEventListener('change', dropMenu);
+
+  window.onload = function() {
+    navBox.checked = false;
+    if (body.classList.contains('u-overflow-hidden')) body.classList.remove('u-overflow-hidden');
+    if (nav.classList.contains('reveal')) nav.classList.remove('reveal');
+  }
+
+
+// FROM CSS TRICKS
+// https://css-tricks.com/stop-animations-during-window-resizing/
+
+let resizeTimer;
+window.addEventListener("resize", () => {
+  console.log('resized');
+  document.body.classList.add("u-resize-animation-stopper");
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    document.body.classList.remove("u-resize-animation-stopper");
+  }, 400);
 });
-
-headerObserver.observe(header);
 
 }());

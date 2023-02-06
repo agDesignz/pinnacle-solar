@@ -1,0 +1,66 @@
+@use "../abstracts/variables"as v;
+@use "../abstracts/mixins"as m;
+
+.title {
+  background-color: v.$color-grey-dark;
+  padding: 20rem 0 10rem;
+
+  @include m.respond(bp-sm) {
+    text-align: center;
+  }
+
+  &__content {
+
+    @include m.respond(bp-sm) {
+      text-align: center;
+    }
+  }
+
+}
+
+.description {
+  @include m.padVertLg;
+
+  &__content {
+    display: grid;
+    row-gap: v.$row-gap-sm;
+    width: 80%;
+
+    @include m.respond(bp-md) {
+      justify-self: center;
+    }
+
+    @include m.respond(bp-sm) {
+      width: 100%;
+    }
+
+    &--right {
+      justify-self: end;
+    }
+  }
+
+  figure {
+    @include m.respond(bp-md) {
+      width: 80%;
+      justify-self: center;
+    }
+
+    @include m.respond(bp-sm) {
+      width: 100%;
+    }
+  }
+}
+
+
+
+.col-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: v.$col-gap-sm;
+  row-gap: v.$row-gap-md;
+
+  @include m.respond(bp-md) {
+    grid-template-columns: 1fr;
+  }
+
+}

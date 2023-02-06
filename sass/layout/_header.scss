@@ -2,20 +2,30 @@
 @use "../abstracts/mixins" as m;
 
 .header {
+  position: absolute;
+  width: 100%;
+
   &__top {
     width: 100%;
     padding: 1.5rem 3.5rem;
     display: grid;
-    align-items: center;
-    grid-template-columns: min-content 1fr;
-    // position: fixed;
+    grid-template-columns: min-content 1fr;    
     top: 0;
+
+    @include m.respond(bp-sm) {
+      padding: 1rem 2.5rem;
+    }
   }
 
   &__branding {
     height: 7rem;
+
     @include m.respond(bp-md) {
       height: 5rem;
+    }
+
+    @include m.respond(bp-sm) {
+      height: 4rem;
     }
   }
 
@@ -27,51 +37,21 @@
     height: 100%;
   }
 
-  &__nav {
-    justify-self: end;
+  &__container {
     display: grid;
-    grid-template-columns: repeat(4, max-content);
-    column-gap: 4rem;
-    padding-top: 1rem;
-  }
+    justify-content: end;
+    align-items: end;
 
-  &__hero {
-    height: 100vh;
-    padding: 20rem 0;
-    display: grid;
-    grid-template-rows: 1fr min-content 1fr;
-    row-gap: 2rem;
-
-    &__title {
-      align-self: end;
-      text-shadow: 0 0.5rem 1rem rgba(v.$color-secondary-light,.3);
-      grid-column: center-start / center-end;
-      @include m.respond(bp-md) {
-        text-align: center;
-      }
-    }
-
-    &__tagline {
-      text-shadow: 0 0.5rem 1rem rgba(v.$color-secondary-light,.3);
-      grid-column: center-start / center-end;
-      @include m.respond(bp-md) {
-        text-align: center;
-      }
-    }
-
-    &__btn {
-      margin-top: 5rem;
-      grid-column: center-start / center-end;
-      justify-self: start;
-      @include m.respond(bp-md) {
-        justify-self: center;
-      }
+    @include m.respond(bp-md) {
+      align-items: center;
     }
   }
-}
 
 .sticky {
   position: fixed;
   background-color: rgba(v.$color-grey-dark, .95);
   z-index: 100;
+  box-shadow: v.$imgShadow;
 }
+}
+

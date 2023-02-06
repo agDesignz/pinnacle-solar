@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
   <link href="https://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/roboto" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -15,68 +15,54 @@
   </script>
 
   <title>Pinnacle Solar</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 </head>
 
 <body>
-  <div class="top-background top-background--home">
-
-  </div>
   <header class="header">
     <div class="header__top">
       <div class="header__branding">
         <a href="#" class="header__home-link">
-          <img class="header__logo" src="img/logo-new.png" alt="Pinnacle Solar Logo">
+          <img class="header__logo" src="images/logo-new.png" alt="Pinnacle Solar Logo">
         </a>
       </div>
-      <ul class="header__nav header-menu">
-        <li class="header-menu__item">
-          <a class="header-menu__link" href="#">Home</a>
-        </li>
-        <li class="header-menu__item">
-          <a class="header-menu__link" href="#">About</a>
-        </li>
-        <li class="header-menu__item">
-          <a class="header-menu__link" href="#">Why Solar</a>
-        </li>
-        <li class="header-menu__item">
-          <a class="header-menu__link" href="#">Contact</a>
-        </li>
-      </ul>
-      <!-- hamburger nav -->
-      <!-- <div class="hamburger hamburger--corner">
+      <div class="header__container">
+        <ul class="nav">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/about.html">About</a>
+          </li>
+          <li>
+            <a href="#">Why Solar</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
         <input type="checkbox" class="hamburger__checkbox" id="nav-toggle">
         <label for="nav-toggle" class="hamburger__button hamburger__button--corner">
           <span class="hamburger__icon">&nbsp;</span>
         </label>
-        <div class="hamburger__background">
-          <ul class="hamburger__nav hamburger-menu">
-            <li class="hamburger-menu__item">
-              <a class="hamburger-menu__link" href="#">Home</a>
-            </li>
-            <li class="hamburger-menu__item">
-              <a class="hamburger-menu__link" href="#">About</a>
-            </li>
-            <li class="hamburger-menu__item">
-              <a class="hamburger-menu__link" href="#">Why Solar</a>
-            </li>
-            <li class="hamburger-menu__item">
-              <a class="hamburger-menu__link" href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div> -->
-      <!-- END hamburger nav -->
-    </div>
-    <div class="header__hero container--12-col">
-      <h1 class="header__hero__title heading-1 heading-1 text-light">A partnership with the sun</h1>
-      <h2 class="header__hero__tagline heading-2 text-light hero-subheading">Take control of your energy today!</h2>
-      <a href="#" class="btn btn--gold btn--dark-bg header__hero__btn">Get a quote</a>
+
+      </div>
     </div>
   </header>
+  <div class="top-background top-background--home">
+  </div>
 
-  <main class="container__home  container--12-col">
+  <div class="home-hero container--12-col">
+    <h1 class="home-hero__title heading-1 heading-1 text-light">A partnership with the sun</h1>
+    <h2 class="home-hero__tagline heading-2 text-light hero-subheading">Take control of your energy today!</h2>
+    <a href="#" class="btn btn--gold btn--dark-bg home-hero__btn">
+      <span class="btn__link">Get a quote</span>
+    </a>
+  </div>
 
-    <section class="home-intro container__central">
+  <main class="container--home  container--12-col">
+
+    <section class="home-intro container--central">
 
       <h2 class="heading-2  home-intro__heading stacker">Solar Energy Solutions for New England</h2>
 
@@ -84,26 +70,28 @@
         <div class="home-intro__block">
           <h3 class="home-intro__subheading heading-3 ">Who we are</h2>
             <p class="home-intro__text">
-              We are a small business in the beautiful Berkshire mountains of western Massachussetts committed to helping our customers with their solar needs and all that jazz.
+              We are a small business in the beautiful Berkshire mountains of western Massachussetts committed to
+              helping our customers with their solar needs and all that jazz.
             </p>
         </div>
         <div class="home-intro__block">
           <h3 class="home-intro__subheading heading-3 ">What we do</h3>
           <p class="home-intro__text">
-            We provide the best experience for home and business owners as they transition to the savings of solar energy.
+            We provide the best experience for home and business owners as they transition to the savings of solar
+            energy.
             We know you work hard for your money. We work hard to make sure you keep it.
           </p>
         </div>
-        <a href="#" class="btn btn--gold-border home-intro__btn">About Us</a>
+        <a href="#" class="btn btn--gold-border home-intro__btn"><span class="btn__link">About Us</span></a>
       </div>
 
 
       <div class="home-intro__gal">
         <figure class="grid-fig home-intro__fig home-intro__fig--1">
-          <img src="img/intro-1.jpg" alt="New England Countryside and Farm">
+          <img src="images/intro-1.jpg" alt="New England Countryside and Farm">
         </figure>
         <figure class="grid-fig home-intro__fig home-intro__fig--2">
-          <img src="img/intro-2.jpg" alt="Worker performing a solar roof install">
+          <img src="images/intro-2.jpg" alt="Worker performing a solar roof install">
         </figure>
 
       </div>
@@ -112,7 +100,8 @@
     <section class="home-options container--12-col">
       <div class="home-options__container stacker">
         <h2 class="home-options__heading heading-2 text-gold">Your solar options</h2>
-        <h3 class="home-options__subheading text-light heading-3">We offer a plethora of solar home energy solutions tailored to your needs</h3>
+        <h3 class="home-options__subheading text-light heading-3">We offer a plethora of solar home energy solutions
+          tailored to your needs</h3>
 
         <div class="features__list shine">
           <h2 class="features__title text-gold">Ownership</h2>
@@ -147,12 +136,9 @@
           <p class="features__item text-light">Industry leading 25 year warranty</p>
         </div>
 
-        <!-- <div class="home-options__content"> -->
-          <h3 class="home-options__subheading home-options__subheading--bottom heading-3 text-light">Contact us and we'll help you find the solar option that's right for you</h3>
-          <div class="home-options__btn">
-            <a class="btn btn--gold" href="#">Get a quote</a>
-          </div>
-        <!-- </div> -->
+        <h3 class="home-options__subheading home-options__subheading--bottom heading-3 text-light">Contact us and we'll
+          help you find the solar option that's right for you</h3>
+        <a href="#" class="btn btn--gold btn--dark-bg home-options__btn"><span class="btn__link">Get a quote</span></a>
 
       </div>
     </section>
@@ -163,7 +149,8 @@
       <div class="image-card">
         <div class="image-card__content">
           <h3 class="image-card__heading heading-3 text-light">Assess</h3>
-          <p class="image-card__text">The first step is to find what works best for you. An expert will evaluate your site, answer all your questions and develop a plan to maximize your savings.</p>
+          <p class="image-card__text">The first step is to find what works best for you. An expert will evaluate your
+            site, answer all your questions and develop a plan to maximize your savings.</p>
         </div>
         <div class="image-card__background image-card__background--1"></div>
       </div>
@@ -171,7 +158,8 @@
       <div class="image-card">
         <div class="image-card__content">
           <h3 class="image-card__heading heading-3 text-light">Install</h3>
-          <p class="image-card__text">Installations typically take one to two days. Our engineers plan ahead with you so the exciting day goes smoothly and you’re up and saving in no time.</p>
+          <p class="image-card__text">Installations typically take one to two days. Our engineers plan ahead with you so
+            the exciting day goes smoothly and you’re up and saving in no time.</p>
         </div>
         <div class="image-card__background image-card__background--2"></div>
       </div>
@@ -179,7 +167,8 @@
       <div class="image-card">
         <div class="image-card__content">
           <h3 class="image-card__heading heading-3 text-light">Save</h3>
-          <p class="image-card__text">Experience a new, thrilling sensation every time the sun is out and shining. Your system is producing and the savings keep building up over the years.</p>
+          <p class="image-card__text">Experience a new, thrilling sensation every time the sun is out and shining. Your
+            system is producing and the savings keep building up over the years.</p>
         </div>
         <div class="image-card__background image-card__background--3"></div>
       </div>
@@ -193,51 +182,60 @@
       </div>
 
       <div class="home-info__content">
-        <h3 class="home-info__subheading heading-3">Learn more about our process and how we can help you save money while taking control of your energy needs</h3>
+        <h3 class="home-info__subheading heading-3">Learn more about our process and how we can help you save money
+          while taking control of your energy needs</h3>
         <a href="#" class="text-btn">Learn More <i class="las la-arrow-right"></i></a>
       </div>
 
     </section>
 
-    <section class="home-why container--12-col container__full">
+    <section class="home-why container--12-col container--full">
 
-      <div class="home-why__container container__central text-light stacker">
+      <div class="home-why__container container--central text-light stacker">
         <div class="icon-list">
           <h2 class="icon-list__heading heading-2 text-light">Why solar?</h2>
           <h2 class="icon-list__star"><i class="las la-sun"></i></h2>
-          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.</p>
           <h2 class="icon-list__star"><i class="las la-sun"></i></h2>
-          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.</p>
           <h2 class="icon-list__star"><i class="las la-sun"></i></h2>
-          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.</p>
           <h2 class="icon-list__star"><i class="las la-sun"></i></h2>
-          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.</p>
           <a href="#" class="icon-list__btn text-btn text-btn--light">Learn More <i class="las la-arrow-right"></i></a>
         </div>
 
         <div class="icon-list">
           <h2 class="icon-list__heading heading-2 text-light">Why choose us?</h2>
           <h2 class="icon-list__star"><i class="las la-sun"></i></h2>
-          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.</p>
           <h2 class="icon-list__star"><i class="las la-sun"></i></h2>
-          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.</p>
           <h2 class="icon-list__star"><i class="las la-sun"></i></h2>
-          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <!-- <h2 class="icon-list__star">&#10041;</h2>
-            <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
-          <a href="#" class="icon-list__btn text-btn text-btn--light">Check us out <i class="las la-arrow-right"></i></a>
+          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#" class="icon-list__btn text-btn text-btn--light">Check us out <i
+              class="las la-arrow-right"></i></a>
         </div>
       </div>
     </section>
 
-    <section class="home-cta container--12-col container__full">
-      <div class="home-cta__container container__central">
+    <section class="home-cta container--12-col container--full">
+      <div class="home-cta__container container--central">
 
         <div class="home-cta__content">
           <h2 class="home-cta__heading text-light">Get started today!</h2>
           <h3 class="heading-3 text-light">Contact us for a no-cost assessment</h3>
-          <h4 class="home-cta__text text-light">With the price of energy sky-rocketing, why wait to see if your home or business is right for solar?</h4>
-          <h4 class="home-cta__text text-light">There is no cost for the assessment. We show you your options, calculate your savings and answer all of your questions.</h4>
+          <h4 class="home-cta__text text-light">With the price of energy sky-rocketing, why wait to see if your home or
+            business is right for solar?</h4>
+          <h4 class="home-cta__text text-light">There is no cost for the assessment. We show you your options, calculate
+            your savings and answer all of your questions.</h4>
         </div>
 
         <form class="home-cta__contact contact-form card card--lg card--dark-bg">
@@ -251,7 +249,8 @@
             <input class="contact-form__input" placeholder="CONTACT NO">
           </div>
           <div class="contact-form__group contact-form__group--message">
-            <textarea class="contact-form__input contact-form__input--message" rows="8" placeholder="MESSAGE"></textarea>
+            <textarea class="contact-form__input contact-form__input--message" rows="8"
+              placeholder="MESSAGE"></textarea>
           </div>
           <div class="contact-form__group contact-form__buttons">
             <button type="submit" class="contact-form__button btn btn--sm btn--white-border">SEND</button>
@@ -266,23 +265,21 @@
   <footer class="footer container--12-col">
 
     <div class="footer__container">
-        <img class="footer__logo-img" src="img/logo-mini.png" alt="Mini logo">
+      <img class="footer__logo-img" src="images/logo-mini.png" alt="Mini logo">
       <div class="footer__box">
         <div class="footer__info-box">
           <h4 class="footer__name">Pinnacle Solar</h4>
           <p class="footer__address">
-          <span>P.O. box 193</span>
-          <span>Becket, MA</span>
-          <span>01223</span>
-        </p>
+            <span>P.O. box 193</span>
+            <span>Becket, MA</span>
+            <span>01223</span>
+          </p>
         </div>
 
 
-      <a href="mailto:info@pinnaclesolarenergy.com" class="footer__email">info@pinnaclesolarenergy.com</a>
+        <a href="mailto:info@pinnaclesolarenergy.com" class="footer__email">info@pinnaclesolarenergy.com</a>
       </div>
-      <div class="footer__btn">
-            <a href="#" class="btn btn--white-border btn--dark-bg">Get a quote</a>
-          </div>
+      <a href="#" class="btn btn--white-border btn--dark-bg footer__btn"><span class="btn__link">Get a quote</span></a>
     </div>
 
     <div class="footer__bottom">

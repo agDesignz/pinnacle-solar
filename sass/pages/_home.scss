@@ -1,12 +1,45 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 
+.home-hero {
+  height: 100vh;
+  padding: 20rem 0;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  row-gap: 2rem;
+
+  &__title {
+    align-self: end;
+    text-shadow: 0 0.5rem 1rem rgba(v.$color-secondary-light,.3);
+    grid-column: center-start / center-end;
+    @include m.respond(bp-md) {
+      text-align: center;
+    }
+  }
+
+  &__tagline {
+    text-shadow: 0 0.5rem 1rem rgba(v.$color-secondary-light,.3);
+    grid-column: center-start / center-end;
+    @include m.respond(bp-md) {
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    margin-top: 5rem;
+    grid-column: center-start / center-end;
+    justify-self: start;
+    @include m.respond(bp-md) {
+      justify-self: center;
+    }
+  }
+}
+
 .home-intro {
   display: grid;
   grid-template-columns: 3fr 2fr;
   row-gap: v.$row-gap-md;
   @include m.padVertLg;
-
   @include m.respond(bp-md) {
     @include m.stackEm;
   }
@@ -40,7 +73,6 @@
 
   &__btn {
     justify-self: start;
-
     @include m.respond(bp-md) {
       justify-self: center;
     }
@@ -50,7 +82,6 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(4, 10rem);
-
     @include m.respond(bp-md) {
       grid-template-rows: repeat(4, 15vw);
     }
@@ -85,16 +116,13 @@
     grid-gap: v.$col-gap-sm;
     row-gap: v.$row-gap-md;
     @include m.padVertMd;
-
     @include m.respond(bp-lg) {
       grid-column: v.$fullGrid;
     }
-
     @include m.respond(bp-md) {
       grid-column: v.$centralGrid;
       @include m.stackEm;
     }
-
   }
 
   &__heading {
@@ -102,21 +130,20 @@
     padding: 2rem;
   }
 
-    &__subheading {
-      grid-column: 1 / -1;
-      padding: 0 2rem;
+  &__subheading {
+    grid-column: 1 / -1;
+    padding: 0 2rem;
 
-      &--bottom {
-        align-self: end;
-      }
+    &--bottom {
+      align-self: end;
     }
+  }
 
   &__btn {
     grid-column: 1 / -1;
     justify-self: center;
     padding: 0 2rem;
   }
-
 }
 
 .features {
@@ -158,17 +185,14 @@
   column-gap: v.$col-gap-md;
   grid-template-rows: min-content min-content;
   row-gap: v.$row-gap-md;
-
   @include m.respond(bp-lg) {
     grid-template-columns: repeat(2, 1fr);
     grid-column: v.$centralGrid;
   }
-
   @include m.respond(bp-md) {
     padding: 0;
     @include m.padVertLg;
   }
-
   @include m.respond(bp-sm) {
     @include m.stackEm;
   }
@@ -183,7 +207,6 @@
     margin-top: 4vw;
     display: grid;
     row-gap: v.$row-gap-sm;
-
     @include m.respond(bp-lg) {
       grid-column: 1 / -1;
       margin-top: 2vw;
@@ -200,7 +223,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: v.$col-gap-lg;
-
     @include m.respond(bp-lg) {
       @include m.stackEm;
     }
@@ -209,18 +231,16 @@
 
 .home-cta {
   @include m.padVertMd;
-  background-image: linear-gradient(to top right, rgba(v.$color-grey-dark, .85), rgba(v.$color-black-light, .8)), url(../img/hero-2.jpg);
+  background-image: linear-gradient(to top right, rgba(v.$color-grey-dark, .85), rgba(v.$color-black-light, .8)), url("../images/hero-2.jpg");
   background-size: cover;
   background-position: center;
   display: grid;
   // grid-template-columns: v.$grid-12-col;
-
   &__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: v.$col-gap-md;
     row-gap: v.$col-gap-md;
-
     @include m.respond(bp-md) {
       grid-template-columns: 1fr;
       padding: 4vw;
