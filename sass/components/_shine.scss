@@ -9,7 +9,7 @@
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
+    left: -200%;
     width: 100px;
     height: 100%;
     background-color: rgba(v.$color-primary-6, .3);
@@ -22,7 +22,7 @@
     box-shadow: 0 1rem 2rem rgba(v.$color-grey-medium,.2);
 
     &::before {
-      left: 160%;
+      left: 200%;
     }
   }
 }

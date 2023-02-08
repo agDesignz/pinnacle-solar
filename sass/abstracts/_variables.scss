@@ -4,21 +4,27 @@ $color-primary-3: #091d2d;
 $color-primary-4: #06131d;
 $color-primary-5: #4194d9;
 $color-primary-6: #bad8f1;
+$color-primary-7: #dbebf8;
+$color-primary-8: #ebf4fb;
 
 $color-secondary: #FFCB42;
 $color-secondary-1: #FFB200;
 $color-secondary-2: #ff9d00;
+// $color-secondary-3: #ff9d00;
+// $color-secondary-4: #ff9d00;
+$color-secondary-5: #fff6df;
+$color-secondary-6: #fffcf3;
 
 $color-black: #040403;
 $color-black-light: #191815;
 
 $color-grey-dark: #2e2c27;
 $color-grey-medium: #59554c;
-$color-grey-light: #969ba0;
+$color-grey-medium-light: #969ba0;
 $color-grey-light: #b1ada4;
 $color-grey-lighter: #e7e6e3;
 
-$color-white: #fff;
+$color-white: #ffffff;
 
 
 $color-primary-light: $color-primary;
@@ -41,26 +47,27 @@ $font-light: $color-white;
 
 
 // LAYOUT
-$col-gap-xl: 8vw;
-$col-gap-lg: 6vw;
-$col-gap-md: 4vw;
-$col-gap-sm: 2vw;
+$col-gap-xl: 8rem;
+$col-gap-lg: 6rem;
+$col-gap-md: 3rem;
+$col-gap-sm: 1.5rem;
 
-$row-gap-xl: 8vw;
-$row-gap-lg: 6vw;
-$row-gap-md: 4vw;
-$row-gap-sm: 2vw;
+$row-gap-xl: 8rem;
+$row-gap-lg: 6rem;
+$row-gap-md: 4rem;
+$row-gap-sm: 1.5rem;
 
 $fullGrid: full-start / full-end;
 $centralGrid: center-start / center-end;
 
 // STYLE
-$imgShadow: 0 0.5rem 1rem rgba($color-grey-dark,.5);
-$gradient-green: linear-gradient(to top right, $color-primary-dark, $color-primary-light);
-$gradient-gold: linear-gradient(to top right, $color-secondary-dark, $color-secondary-light);
-// $gradient-green: linear-gradient(to top right, $color-primary-dark, $color-primary-light);
 
+$gradient-primary: linear-gradient(to top right, $color-primary-dark, $color-primary-light);
+$gradient-gold: linear-gradient(to top right, $color-secondary-dark, $color-secondary-light);
+
+$imgShadow: 0 0.5rem 1rem rgba($color-grey-dark,.5);
 $shadow-light-w: rgba($color-grey-medium, 0.5) 0px .8rem 2.4rem;
+$shadow-light: rgba($color-grey-light, 0.5) 0px .5rem 1.4rem;
 
 // RESPONSIVE BREAKPOINTS
 $bp-largest: 75em;      // 1200px

@@ -40,7 +40,7 @@
   &__container {
     display: grid;
     justify-content: end;
-    align-items: end;
+    align-items: center;
 
     @include m.respond(bp-md) {
       align-items: center;
@@ -49,9 +49,9 @@
 
 .sticky {
   position: fixed;
-  background-color: rgba(v.$color-grey-dark, .95);
+  background-color: v.$color-grey-dark;
   z-index: 100;
-  box-shadow: v.$imgShadow;
+  box-shadow: 0 0.8rem 1.4rem #59554c80;;
 }
 }
 

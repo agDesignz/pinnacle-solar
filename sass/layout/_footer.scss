@@ -1,42 +1,32 @@
-@use "../abstracts/variables" as v;
-@use "../abstracts/mixins" as m;
+@use "../abstracts/variables"as v;
+@use "../abstracts/mixins"as m;
 
 .footer {
   font-size: 1.4rem;
   background-color: v.$color-grey-dark;
   display: grid;
-  @include m.padVertMd;
+  padding-top: 4%;
+  padding-bottom: 2%;
 
   &__container {
     grid-column: center-start / center-end;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
     color: v.$color-white;
-    column-gap: v.$col-gap-md;
-    row-gap: v.$row-gap-sm;
+    grid-template-columns: 1fr 1fr 2fr;
 
-    @include m.respond(bp-lg) {
-      grid-template-columns: 1fr max-content max-content;
+    @include m.respond(bp-md) {
+      grid-template-columns: 1fr 1fr;
     }
 
     @include m.respond(bp-sm) {
-      @include m.stackEm;
+      justify-items: center;
     }
   }
 
   &__logo-img {
     max-height: 10rem;
-    // align-self: center;
-  }
 
-  &__box {
-    display: grid;
-    grid-template-columns: max-content min-content;
-    column-gap: v.$col-gap-md;
-    row-gap: v.$row-gap-sm;
-
-    @include m.respond(bp-lg) {
-      grid-template-columns: 1fr;
+    @include m.respond(bp-sm) {
+      height: 15vw;
     }
   }
 
@@ -51,11 +41,12 @@
   }
 
   &__email {
+
     &,
     &:link,
     &:visited {
       color: v.$color-white;
-      font-size: 2rem;
+      font-size: 1.5rem;
       transition: all 0.2s;
       display: inline-block;
     }
@@ -64,15 +55,34 @@
       color: v.$color-grey-light;
       transform: translateY(-2px);
     }
+  }
 
-    @include m.respond(bp-lg) {
-      grid-row: 1 / span 1;
+  &__cta {
+    grid-template-rows: min-content 1fr;
+    justify-items: end;
+
+    @include m.respond(bp-md) {
+      grid-column: 1 / -1;
+      justify-items: center;
+      row-gap: v.$row-gap-md;
+    }
+
+    h3 {
+      text-align: right;
+
+      @include m.respond(bp-md) {
+        text-align: center;
+      }
     }
   }
 
   &__btn {
-    justify-self: end;
-    align-self: start;
+    // justify-self: end;
+    align-self: end;
+
+    @include m.respond(bp-md) {
+      justify-self: center;
+    }
   }
 
   &__bottom {
@@ -80,4 +90,5 @@
     margin-top: 5rem;
     justify-self: center;
   }
+
 }

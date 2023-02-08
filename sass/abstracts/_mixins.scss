@@ -20,31 +20,31 @@
 }
 
 @mixin padVertMd {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 8%;
+  padding-bottom: 8%;
 
   @include respond(bp-md) {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 5%;
+    padding-bottom: 5%;
   }
 }
 
 @mixin padVertLg {
-  padding-top: 15rem;
-  padding-bottom: 15rem;
+  padding-top: 10%;
+  padding-bottom: 10%;
 
   @include respond(bp-md) {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-top: 5%;
+    padding-bottom: 5%;
   }
 }
 
-@mixin center70 {
-  width: 70%;
+@mixin center80 {
+  width: 80%;
   margin: auto;
 }
 
 @mixin stackEm {
   grid-template-columns: 1fr;
-  row-gap: v.$row-gap-xl;
+  // row-gap: v.$row-gap-xl;
 }

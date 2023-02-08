@@ -1,5 +1,5 @@
-@use "../abstracts/variables" as v;
-@use "../abstracts/mixins" as m;
+@use "../abstracts/variables"as v;
+@use "../abstracts/mixins"as m;
 
 .home-hero {
   height: 100vh;
@@ -10,16 +10,18 @@
 
   &__title {
     align-self: end;
-    text-shadow: 0 0.5rem 1rem rgba(v.$color-secondary-light,.3);
+    text-shadow: 0 0.5rem 1rem rgba(v.$color-secondary-light, .3);
     grid-column: center-start / center-end;
+
     @include m.respond(bp-md) {
       text-align: center;
     }
   }
 
   &__tagline {
-    text-shadow: 0 0.5rem 1rem rgba(v.$color-secondary-light,.3);
+    text-shadow: 0 0.5rem 1rem rgba(v.$color-secondary-light, .3);
     grid-column: center-start / center-end;
+
     @include m.respond(bp-md) {
       text-align: center;
     }
@@ -29,6 +31,7 @@
     margin-top: 5rem;
     grid-column: center-start / center-end;
     justify-self: start;
+
     @include m.respond(bp-md) {
       justify-self: center;
     }
@@ -36,28 +39,10 @@
 }
 
 .home-intro {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  row-gap: v.$row-gap-md;
   @include m.padVertLg;
-  @include m.respond(bp-md) {
-    @include m.stackEm;
-  }
-
-  &__heading {
-    grid-column: 1 / -1;
-  }
 
   &__content {
-    align-self: center;
-    padding-right: 4vw;
-    display: grid;
-    grid-template-rows: repeat(3, min-content);
     row-gap: v.$row-gap-md;
-  }
-
-  &__block {
-    grid-column: 1 / 2;
   }
 
   &__subheading {
@@ -73,52 +58,26 @@
 
   &__btn {
     justify-self: start;
+
     @include m.respond(bp-md) {
       justify-self: center;
-    }
-  }
-
-  &__gal {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, 10rem);
-    @include m.respond(bp-md) {
-      grid-template-rows: repeat(4, 15vw);
-    }
-  }
-
-  &__fig {
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: v.$imgShadow;
-
-    &--1 {
-      grid-column: 1 / -2;
-      grid-row: 1 / -2;
-    }
-
-    &--2 {
-      grid-column: 3 / -1;
-      grid-row: 3 / -1;
     }
   }
 }
 
 .home-options {
   display: grid;
-  background-color: v.$color-primary-dark;
+  background-image: v.$gradient-primary;
   grid-column: v.$fullGrid;
 
   &__container {
     grid-column: v.$centralGrid;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: v.$col-gap-sm;
-    row-gap: v.$row-gap-md;
     @include m.padVertMd;
+
     @include m.respond(bp-lg) {
       grid-column: v.$fullGrid;
     }
+
     @include m.respond(bp-md) {
       grid-column: v.$centralGrid;
       @include m.stackEm;
@@ -126,12 +85,10 @@
   }
 
   &__heading {
-    grid-column: 1 / -1;
     padding: 2rem;
   }
 
   &__subheading {
-    grid-column: 1 / -1;
     padding: 0 2rem;
 
     &--bottom {
@@ -148,6 +105,7 @@
 
 .features {
   &__list {
+    background-color: v.$color-grey-dark;
     display: grid;
     row-gap: 2rem;
     padding: 2rem;
@@ -177,55 +135,34 @@
 }
 
 .home-info {
-  grid-column: v.$fullGrid;
-  padding: 3.5rem;
   @include m.padVertLg;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: v.$col-gap-md;
   grid-template-rows: min-content min-content;
   row-gap: v.$row-gap-md;
-  @include m.respond(bp-lg) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-column: v.$centralGrid;
-  }
+
   @include m.respond(bp-md) {
-    padding: 0;
     @include m.padVertLg;
-  }
-  @include m.respond(bp-sm) {
-    @include m.stackEm;
   }
 
   &__heading {
-    grid-column: 1 / -1;
     text-align: center;
   }
 
   &__content {
-    grid-column: 2 / -2;
-    margin-top: 4vw;
-    display: grid;
-    row-gap: v.$row-gap-sm;
-    @include m.respond(bp-lg) {
+    grid-column: 4 / -4;
+
+    @include m.respond(bp-md) {
       grid-column: 1 / -1;
-      margin-top: 2vw;
     }
   }
 }
 
 .home-why {
-  display: grid;
   @include m.padVertMd;
-  background-color: v.$color-primary-dark;
+  background-image: v.$gradient-primary;
 
   &__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     column-gap: v.$col-gap-lg;
-    @include m.respond(bp-lg) {
-      @include m.stackEm;
-    }
+    row-gap: v.$row-gap-lg;
   }
 }
 
@@ -234,38 +171,12 @@
   background-image: linear-gradient(to top right, rgba(v.$color-grey-dark, .85), rgba(v.$color-black-light, .8)), url("../images/hero-2.jpg");
   background-size: cover;
   background-position: center;
-  display: grid;
-  // grid-template-columns: v.$grid-12-col;
-  &__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: v.$col-gap-md;
-    row-gap: v.$col-gap-md;
-    @include m.respond(bp-md) {
-      grid-template-columns: 1fr;
-      padding: 4vw;
-    }
-  }
-
-  &__content {
-    display: grid;
-    row-gap: v.$row-gap-sm;
-  }
 
   &__heading {
     font-size: 6rem;
     font-weight: 800;
     line-height: 1.1;
-    // margin-bottom: 4vw;
+    justify-self: center;
   }
 
-  &__text {
-    font-size: 2rem;
-    font-weight: 300;
-  }
-
-  &__contact {
-    // grid-column: 7 / -1;
-    // grid-row: 2 / -1;
-  }
 }

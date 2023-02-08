@@ -1,6 +1,7 @@
 @use "../abstracts/variables"as v;
 @use "../abstracts/mixins"as m;
 
+
 .title {
   background-color: v.$color-grey-dark;
   padding: 20rem 0 10rem;
@@ -21,46 +22,37 @@
 .description {
   @include m.padVertLg;
 
-  &__content {
-    display: grid;
-    row-gap: v.$row-gap-sm;
-    width: 80%;
+  &__fig--2 {
 
     @include m.respond(bp-md) {
-      justify-self: center;
-    }
-
-    @include m.respond(bp-sm) {
-      width: 100%;
-    }
-
-    &--right {
-      justify-self: end;
-    }
-  }
-
-  figure {
-    @include m.respond(bp-md) {
-      width: 80%;
-      justify-self: center;
-    }
-
-    @include m.respond(bp-sm) {
-      width: 100%;
+      grid-row: 4 / 5;
     }
   }
 }
 
+.services {
+  @include m.padVertLg;
+  background-color: v.$color-primary-7;
 
-
-.col-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: v.$col-gap-sm;
-  row-gap: v.$row-gap-md;
-
-  @include m.respond(bp-md) {
-    grid-template-columns: 1fr;
+  &__heading {
+    text-align: center;
+    color: v.$color-grey-dark;
   }
 
+  &__item {
+    background-color: v.$color-secondary-6;
+   padding: 1.5rem;
+   border: 1px solid v.$color-grey-medium;
+   border-radius: .8rem;
+   box-shadow: v.$shadow-light;
+  }
+
+  &__subheading {
+    text-align: center;
+    color: v.$color-primary-dark;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+  }
 }

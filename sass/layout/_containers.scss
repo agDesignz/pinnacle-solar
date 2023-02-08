@@ -1,5 +1,5 @@
-@use "../abstracts/variables" as v;
-@use "../abstracts/mixins" as m;
+@use "../abstracts/variables"as v;
+@use "../abstracts/mixins"as m;
 
 
 .container {
@@ -9,19 +9,21 @@
     background-color: v.$color-white;
   }
 
-  &--about {
-    
-  }
-
   &--full {
     grid-column: v.$fullGrid;
+  }
+
+  &--full--padded {
+    padding: 3.5rem;
+
+    @include m.respond(bp-md) {
+      padding: 2rem;
+    }
   }
 
   &--central {
     grid-column: v.$centralGrid;
   }
-
-
 
   &--12-col {
     display: grid;
@@ -33,15 +35,101 @@
   }
 }
 
-.stacker {
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: v.$col-gap-sm;
+  row-gap: v.$row-gap-md;
 
-  @include m.respond(bp-md) {
-    @include m.center70;
+  &--md-80 {
+
+    @include m.respond(bp-md) {
+      grid-template-columns: 1fr;
+      width: 80%;
+      justify-self: center;
+    }
+
+    @include m.respond(bp-sm) {
+      width: 100%;
+    }
   }
 
-  @include m.respond(bp-sm) {
-    width: 100%;
+  &__content {
+
+    &--grid {
+      display: grid;
+      grid-auto-rows: min-content;
+      row-gap: v.$row-gap-sm;
+    }
+
+    &--full {
+      grid-column: 1 / -1;
+    }
+
+    &--span-6 {
+      grid-column: span 6;
+    }
+
+    &--span-4 {
+      grid-column: span 4;
+    }
+
+    &--span-3 {
+      grid-column: span 3;
+    }
+
+    &--lg-6 {
+      @include m.respond(bp-lg) {
+        grid-column: span 6;
+      }
+    }
+
+    &--md-full {
+      @include m.respond(bp-md) {
+        grid-column: 1 / -1;
+      }
+    }
+
+    &--md-6 {
+      @include m.respond(bp-md) {
+        grid-column: span 6;
+      }
+    }
+
+    &--sm-full {
+      @include m.respond(bp-sm) {
+        grid-column: 1 / -1;
+      }
+    }
+
+
+
+    &--80 {
+
+      width: 80%;
+
+      @include m.respond(bp-md) {
+        width: 100%
+      }
+
+      @include m.respond(bp-sm) {
+        width: 100%;
+      }
+    }
+
+    &--right {
+      justify-self: end;
+
+      @include m.respond(bp-md) {
+        justify-self: center;
+      }
+    }
+
+  }
+
+
+
+  &__fig {
+    align-self: start;
   }
 }
-
-
