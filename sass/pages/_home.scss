@@ -63,16 +63,31 @@
       justify-self: center;
     }
   }
+
+  &__stack {
+    display: flex;
+    align-items: end;
+    @include m.sunnyB;
+    background-position: right top;
+
+    @include m.respond(bp-md) {
+      background-image: none;
+    }
+  }
 }
 
 .home-options {
   display: grid;
-  background-image: v.$gradient-primary;
+  // background-image: v.$gradient-primary;
+  background-image: linear-gradient(rgba(v.$color-primary-3, .85), rgba(v.$color-primary-3, .85)), url("../images/hero-7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   grid-column: v.$fullGrid;
 
   &__container {
     grid-column: v.$centralGrid;
-    @include m.padVertMd;
+    @include m.padVertLg;
 
     @include m.respond(bp-lg) {
       grid-column: v.$fullGrid;
@@ -105,7 +120,7 @@
 
 .features {
   &__list {
-    background-color: v.$color-grey-dark;
+    background-color: rgba(v.$color-grey-dark, .7);
     display: grid;
     row-gap: 2rem;
     padding: 2rem;
@@ -137,7 +152,8 @@
 .home-info {
   @include m.padVertLg;
   grid-template-rows: min-content min-content;
-  row-gap: v.$row-gap-md;
+  row-gap: v.$row-gap-lg;
+  background-color: v.$color-primary-8;
 
   @include m.respond(bp-md) {
     @include m.padVertLg;
@@ -156,9 +172,8 @@
   }
 }
 
-.home-why {
-  @include m.padVertMd;
-  background-image: v.$gradient-primary;
+.benefits {
+  @include m.padVertLg;
 
   &__container {
     column-gap: v.$col-gap-lg;
@@ -167,7 +182,7 @@
 }
 
 .home-cta {
-  @include m.padVertMd;
+  @include m.padVertLg;
   background-image: linear-gradient(to top right, rgba(v.$color-grey-dark, .85), rgba(v.$color-black-light, .8)), url("../images/hero-2.jpg");
   background-size: cover;
   background-position: center;
@@ -177,6 +192,11 @@
     font-weight: 800;
     line-height: 1.1;
     justify-self: center;
+  }
+
+  &__subheading {
+    font-weight: 500;
+    padding-bottom: 1.5rem;
   }
 
 }

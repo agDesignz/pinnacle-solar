@@ -9,7 +9,7 @@
     width: 100%;
     padding: 1.5rem 3.5rem;
     display: grid;
-    grid-template-columns: min-content 1fr;    
+    grid-template-columns: min-content 1fr;
     top: 0;
 
     @include m.respond(bp-sm) {
@@ -49,9 +49,8 @@
 
 .sticky {
   position: fixed;
-  background-color: v.$color-grey-dark;
+  background-color: rgba(v.$color-grey-dark, .95);
   z-index: 100;
   box-shadow: 0 0.8rem 1.4rem #59554c80;;
 }
 }
-

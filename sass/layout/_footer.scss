@@ -8,17 +8,19 @@
   padding-top: 4%;
   padding-bottom: 2%;
 
+  @include m.respond(bp-md) {
+    min-height: 100vh;
+    align-content: center;
+  }
+
   &__container {
     grid-column: center-start / center-end;
     color: v.$color-white;
     grid-template-columns: 1fr 1fr 2fr;
 
     @include m.respond(bp-md) {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    @include m.respond(bp-sm) {
-      justify-items: center;
+      grid-template-columns: repeat(2, 1fr);
+    justify-self: center;
     }
   }
 

@@ -6,6 +6,7 @@
   border-radius: .5rem;
   overflow: hidden;
   transition: all .3s;
+  // box-shadow: v.$shadow-light-w;
 
   &__background {
     width: 100%;
@@ -52,7 +53,11 @@
     text-align: justify;
   }
 
+  &:hover {
+    box-shadow: v.$imgShadow;
+    transform: scale(1.02);
+  }
   &:hover &__background {
-    transform: scale(1.1);
+    transform: scale(1.15);
   }
 }

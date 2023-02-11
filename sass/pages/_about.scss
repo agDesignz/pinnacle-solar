@@ -1,29 +1,35 @@
 @use "../abstracts/variables"as v;
 @use "../abstracts/mixins"as m;
 
-
 .title {
-  background-color: v.$color-grey-dark;
+  // background-color: v.$color-grey-dark;
+  background-image: linear-gradient(to left top, rgba(v.$color-black-light,0.7), rgba(v.$color-grey-dark,0.7)),url(../images/hero-6.jpg);
+  background-size: cover;
+  background-position: center bottom;
   padding: 20rem 0 10rem;
-
   @include m.respond(bp-sm) {
     text-align: center;
   }
 
   &__content {
-
     @include m.respond(bp-sm) {
       text-align: center;
     }
   }
-
 }
 
 .description {
-  @include m.padVertLg;
+  @include m.sunnyB;
+  background-position: center;
+  @include m.respond(bp-md) {
+    background-image: none;
+  }
+
+  &__container {
+    @include m.padVertLg;
+  }
 
   &__fig--2 {
-
     @include m.respond(bp-md) {
       grid-row: 4 / 5;
     }
@@ -32,27 +38,57 @@
 
 .services {
   @include m.padVertLg;
-  background-color: v.$color-primary-7;
+  background-image: linear-gradient(rgba(v.$color-primary-3, .85), rgba(v.$color-primary-3, .85)), url("../images/hero-1.jpg");
+  background-size: cover;
+  background-position: center;
+
+  &__content {
+    row-gap: v.$row-gap-xl;
+  }
 
   &__heading {
     text-align: center;
-    color: v.$color-grey-dark;
+    color: v.$color-secondary-light;
   }
 
   &__item {
-    background-color: v.$color-secondary-6;
-   padding: 1.5rem;
-   border: 1px solid v.$color-grey-medium;
-   border-radius: .8rem;
-   box-shadow: v.$shadow-light;
+    padding: 3rem 1.5rem;
+    // border: 1px solid v.$color-grey-medium;
+    border-radius: 0.8rem;
+    box-shadow: v.$shadow-light;
+    background-color: rgba(v.$color-grey-dark, .5);
+    color: v.$color-white;
+  }
+
+  &__rays-img {
+    height: 5rem;
+    justify-self: center;
   }
 
   &__subheading {
     text-align: center;
-    color: v.$color-primary-dark;
+    color: v.$color-secondary-light;
   }
 
   &__text {
     font-size: 1.6rem;
+    text-align: justify;
+  }
+}
+
+.about-cta {
+  @include m.padVertLg;
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__btn {
+    align-content: center;
+    justify-content: end;
+
+    @include m.respond(bp-md) {
+      justify-content: center;
+    }
   }
 }

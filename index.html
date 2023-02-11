@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet"
-    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
   <link href="https://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/roboto" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -22,17 +21,17 @@
   <header class="header">
     <div class="header__top">
       <div class="header__branding">
-        <a href="#" class="header__home-link">
+        <a href="./index.html" class="header__home-link">
           <img class="header__logo" src="images/logo-new.png" alt="Pinnacle Solar Logo">
         </a>
       </div>
       <div class="header__container">
         <ul class="nav">
           <li>
-            <a href="/">Home</a>
+            <a href="./index.html">Home</a>
           </li>
           <li>
-            <a href="/about.html">About</a>
+            <a href="./about.html">About</a>
           </li>
           <li>
             <a href="#">Why Solar</a>
@@ -86,14 +85,15 @@
       </div>
 
 
-      <div class="stack-double grid__content--span-6 grid__content--md-full">
-        <figure class="grid-fig stack-double__fig stack-double__fig--1">
-          <img src="images/intro-1.jpg" alt="New England Countryside and Farm">
-        </figure>
-        <figure class="grid-fig stack-double__fig stack-double__fig--2">
-          <img src="images/intro-2.jpg" alt="Worker performing a solar roof install">
-        </figure>
-
+      <div class="home-intro__stack grid__content--span-6 grid__content--md-full">
+        <div class="stack-double">
+          <figure class="stack-double__fig stack-double__fig--1">
+            <img src="images/intro-1.jpg" alt="New England Countryside and Farm">
+          </figure>
+          <figure class="stack-double__fig stack-double__fig--2">
+            <img src="images/intro-2.jpg" alt="Worker performing a solar roof install">
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -191,39 +191,15 @@
 
     </section>
 
-    <section class="home-why container--12-col container--full">
+    <section class="benefits container--12-col container--full">
 
-      <div class="home-why__container container--central grid grid--80 text-light">
-        <div class="icon-list grid__content--span-6 grid__content--md-full">
-          <h2 class="icon-list__heading heading-2 text-light">Why solar?</h2>
-          <h2 class="icon-list__star"><i class="las la-sun"></i></h2>
-          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.</p>
-          <h2 class="icon-list__star"><i class="las la-sun"></i></h2>
-          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.</p>
-          <h2 class="icon-list__star"><i class="las la-sun"></i></h2>
-          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.</p>
-          <h2 class="icon-list__star"><i class="las la-sun"></i></h2>
-          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#" class="icon-list__btn text-btn text-btn--light">Learn More <i class="las la-arrow-right"></i></a>
-        </div>
-
-        <div class="icon-list grid__content--span-6 grid__content--md-full">
-          <h2 class="icon-list__heading heading-2 text-light">Why choose us?</h2>
-          <h2 class="icon-list__star"><i class="las la-sun"></i></h2>
-          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.</p>
-          <h2 class="icon-list__star"><i class="las la-sun"></i></h2>
-          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.</p>
-          <h2 class="icon-list__star"><i class="las la-sun"></i></h2>
-          <p class="icon-list__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#" class="icon-list__btn text-btn text-btn--light">Check us out <i
-              class="las la-arrow-right"></i></a>
+      <div class="benefits__container container--central grid grid--md-80">
+        <figure class="grid__content--span-4">
+          <img src="images/benefits-1.jpg" alt="A hand gesturing towards thte sun">
+        </figure>
+        <div class="grid__content--grid grid__content--span-8 grid__content--md-full">
+          <h2 class="heading-2">The Benefits of Solar Energy</h2>
+          <p>Let the sun work for you and immediately save money while building equity in your home! We’ve been “renting” electricity much the same way since the time of Thomas Edison. As rates continue to climb year after year, there is no better time to finally take control and harness the power of the sun. Saving tens of thousands of dollars isn’t the only reason to go solar. Solar energy creates energy independence for the community, the state and America!</p>
         </div>
       </div>
     </section>
@@ -231,9 +207,9 @@
     <section class="home-cta container--12-col container--full">
       <div class="home-cta__container container--central grid grid--md-80">
         <h2 class="home-cta__heading grid__content--full text-light">Get started today!</h2>
-        <div class="home-cta__content grid__content--span-6 grid__content--md-full grid__content--80">
+        <div class="home-cta__content grid__content--span-6 grid__content--md-full grid__content--80 grid__content--grid">
 
-          <h3 class="heading-3 text-light">Contact us for a no-cost assessment</h3>
+          <h3 class="home-cta__subheading heading-3 text-light">Contact us for a no-cost assessment</h3>
           <h4 class="home-cta__text text-light">With the price of energy sky-rocketing, why wait to see if your home or
             business is right for solar?</h4>
           <h4 class="home-cta__text text-light">There is no cost for the assessment. We show you your options, calculate
@@ -251,8 +227,7 @@
             <input class="contact-form__input" placeholder="CONTACT NO">
           </div>
           <div class="contact-form__group contact-form__group--message">
-            <textarea class="contact-form__input contact-form__input--message" rows="8"
-              placeholder="MESSAGE"></textarea>
+            <textarea class="contact-form__input contact-form__input--message" rows="8" placeholder="MESSAGE"></textarea>
           </div>
           <div class="contact-form__group contact-form__buttons">
             <button type="submit" class="contact-form__button btn btn--sm btn--white-border">SEND</button>
@@ -269,7 +244,7 @@
     <div class="footer__container grid">
       <img class="footer__logo-img" src="images/logo-mini.png" alt="Mini logo">
       <div class="grid__content">
-        
+
         <div>
           <h3 class="heading-3">Pinnacle Solar</h3>
           <a href="mailto:info@pinnaclesolarenergy.com" class="footer__email">info@pinnaclesolarenergy.com</a>

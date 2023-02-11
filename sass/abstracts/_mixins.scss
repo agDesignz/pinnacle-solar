@@ -23,20 +23,20 @@
   padding-top: 8%;
   padding-bottom: 8%;
 
-  @include respond(bp-md) {
-    padding-top: 5%;
-    padding-bottom: 5%;
-  }
+  // @include respond(bp-md) {
+  //   padding-top: 5%;
+  //   padding-bottom: 5%;
+  // }
 }
 
 @mixin padVertLg {
   padding-top: 10%;
   padding-bottom: 10%;
 
-  @include respond(bp-md) {
-    padding-top: 5%;
-    padding-bottom: 5%;
-  }
+  // @include respond(bp-md) {
+  //   padding-top: 5%;
+  //   padding-bottom: 5%;
+  // }
 }
 
 @mixin center80 {
@@ -47,4 +47,11 @@
 @mixin stackEm {
   grid-template-columns: 1fr;
   // row-gap: v.$row-gap-xl;
+}
+
+@mixin sunnyB {
+  // background-image: linear-gradient(rgba(v.$color-white, .85), rgba(v.$color-white, .85)), url("../images/rays-bg.png");
+  background-image: url("../images/rays-bg-2.png");
+  background-repeat: no-repeat;
+  background-size: 70%;
 }

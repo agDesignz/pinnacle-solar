@@ -10,7 +10,7 @@ $color-primary-8: #ebf4fb;
 $color-secondary: #FFCB42;
 $color-secondary-1: #FFB200;
 $color-secondary-2: #ff9d00;
-// $color-secondary-3: #ff9d00;
+$color-secondary-3: #fce190;
 // $color-secondary-4: #ff9d00;
 $color-secondary-5: #fff6df;
 $color-secondary-6: #fffcf3;
@@ -64,10 +64,11 @@ $centralGrid: center-start / center-end;
 
 $gradient-primary: linear-gradient(to top right, $color-primary-dark, $color-primary-light);
 $gradient-gold: linear-gradient(to top right, $color-secondary-dark, $color-secondary-light);
+$hero-gradient: linear-gradient(to left top, rgba($color-black-light,0.5), rgba($color-grey-dark,0.5));
 
 $imgShadow: 0 0.5rem 1rem rgba($color-grey-dark,.5);
 $shadow-light-w: rgba($color-grey-medium, 0.5) 0px .8rem 2.4rem;
-$shadow-light: rgba($color-grey-light, 0.5) 0px .5rem 1.4rem;
+$shadow-light: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 
 // RESPONSIVE BREAKPOINTS
 $bp-largest: 75em;      // 1200px
