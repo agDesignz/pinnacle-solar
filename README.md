@@ -4,16 +4,14 @@
 
 ## Description
 
-A website theme for eventual deployment on Wordpress. Class naming follows the BEM convention and the folder structure is based on the 7-1 convention. THe layout uses CSS grid. CSS styling is written in SCSS (Sass) and is compiled with NPM autoprefixer, concat, npm-run-all, postcss-cli and sass.
+A website theme for eventual deployment on Wordpress. Class naming follows the BEM convention and the folder structure is based on the 7-1 convention. The layout uses CSS grid. CSS styling is written in SCSS (Sass) and is compiled with NPM autoprefixer, concat, npm-run-all, postcss-cli and sass.
 
-## Table of Contents (Optional)
+## Tech Stack
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [How to contribute](#how-to-contribute)
-- [Tests](#tests)
-- [Questions](#questions)
-- [License](#license)
+- PHP
+- Javascript
+- Sass
+- wordpress/scripts
 
 ## Screenshots
 
@@ -21,26 +19,20 @@ A website theme for eventual deployment on Wordpress. Class naming follows the B
 ![Part of the page](./readme_assets/img-2.png.png)
 ![Part of the page](./readme_assets/img-3.png.png)
 
-## Installation
+## Deployment
 
-Install as any Node.js project. From the root directory, open the command line and run `npm install`.
+[Github Pages](https://agdesignz.github.io/pinnacle-solar/)
+
+[Wordpress PHP Version](https://github.com/agDesignz/pinnacle-solar_wp)
 
 ## Usage
 
 From the root directory, open the command line and run `npm run start`. The site should open in the browser automatically. To compile the code for a build, run `npm run build:css`.
 
-## How to Contribute
+## Contact Me:
 
-Contact me via github.
-
-## Tests
-
-No tests exist at this time.
-
-## Questions
-
-email: []()
-Github: [agdesignz](https://github.com/agdesignz)
+email: [alexgeorgegeer@gmail.com](alexgeorgegeer@gmail.com)
+Github: [agDesignz](https://github.com/agDesignz)
 
 ## License
 
